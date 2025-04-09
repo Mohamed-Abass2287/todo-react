@@ -12,7 +12,7 @@ export const tasks = [
 	{
 		id: '3',
 		title: 'Finish project presentation',
-		completed: false,
+		completed: true,
 	},
 	{
 		id: '4',
