@@ -10,6 +10,7 @@ const App = () => {
 			<AddTaskForm/>
 			<TasksContainer/>
 			<TasksCount/>
+			{/* Demonstrating state */}
 		</div>
 	);
 };

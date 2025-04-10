@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import { tasks } from '../data/tasks';
-import TaskItem from './TaskItem';
 import Input from './Input';
+import TaskItem from './TaskItem';
+
 const TasksContainer = () => {
+	const [todos, setTodos] = useState(tasks);
+
 	return (
 		<div className="tasks-container">
 			<div className="tasks-header">
@@ -9,8 +13,8 @@ const TasksContainer = () => {
 			</div>
 
 			<div id="tasks-list">
-				{tasks.map((task, index) => (
-					<TaskItem key={index} task={task} />
+				{todos.map((task, index) => (
+					<TaskItem key={index} task={task} setTodos={setTodos} todos={todos} />
 				))}
 			</div>
 		</div>
